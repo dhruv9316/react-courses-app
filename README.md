@@ -6,7 +6,7 @@ STEPS TO RUN THIS APPLICATION ON YOUR LOCAL MACHINE
 
 3. Run the following command to clone the repository: 'git clone https://github.com/dhruv9316/react-courses-app.git'
 
-4. Navigate into the cloned repository directory: 'cd <repository-name>'
+4. Navigate into the cloned repository directory: 'cd your_repository_name'
 
 5. Run the following command to install the project dependencies: 'npm install'
 
