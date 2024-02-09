@@ -1,3 +1,5 @@
+DEPLOYED LINK - https://react-courses-app-dhruv9316.vercel.app/
+
 STEPS TO RUN THIS APPLICATION ON YOUR LOCAL MACHINE
 
 1. Open your terminal.
