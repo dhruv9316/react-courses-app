@@ -1,0 +1,143 @@
+.course_details_wrapper{
+    /* width: 90%; */
+    padding: 2rem 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.course_details_container{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.course_main_div{
+    width: 100%;
+    /* margin: 1rem; */
+    padding: 0rem 1rem;
+    display: flex;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.course_details_info{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.course_img > img{
+    width: 15rem;
+    /* aspect-ratio: 1/1; */
+    border-radius: 10px;
+}
+
+.basic_info{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    /* gap: 0.5rem; */
+}
+
+.basic_info > div{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    width: 97%;
+    height: 2rem;
+    padding: 5px 1rem;
+    justify-content: space-between;
+}
+
+.odd_info_row{
+    background-color: #eff5ff;
+}
+
+.basic_info > div > h3{
+    opacity: 70%;
+    font-weight: 300;
+}
+.basic_info > div > p{
+    font-weight: 600;
+}
+
+.prerequisites{
+    width: 100%;
+    /* margin: 1rem; */
+    padding: 0rem 1rem;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    /* align-items: center; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.prerequisites > p{
+    margin-top: -0.5rem;
+}
+
+
+.syllabus{
+    width: 100%;
+    padding: 0rem 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.syllabus h2{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.angle_down_icon{
+    opacity: 90%;
+    font-size: 1.3rem;
+}
+
+.sections_invisible{
+    display: none;
+}
+.sections_visible{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: -1rem;
+}
+
+.enrollment_btn{
+    width: 100%;
+}
+
+.enrollment_btn > button{
+    border: none;
+    background-color: transparent;
+    transition: ease-in-out;
+    transition-duration: 200ms;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.enrollment_btn > button:hover {
+    cursor: pointer;
+    scale: 103%;
+}
+
+@media (max-width : 570px){
+    .course_details_info{
+        flex-direction: column;
+    }
+}

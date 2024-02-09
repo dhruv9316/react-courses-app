@@ -1,0 +1,125 @@
+.dashboard_wrapper{
+    /* width: 90%; */
+    padding: 2rem 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.dashboard_container{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.courses_table{
+    width: 100%;
+    /* margin: 1rem; */
+    padding: 1rem 1rem;
+    display: flex;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.heading{
+    display: flex;
+    width: 90%;
+    /* justify-content: space-around; */
+    margin-top: -1rem;
+    /* margin-left: 7.5px; */
+}
+
+.heading p{
+    font-weight: 600;
+}
+.heading p:nth-child(1){
+    width: 30%;
+    margin-left: 15px;
+}
+.heading p:nth-child(2){
+    width: 20%;
+    margin-left: -10px;
+}
+.heading p:nth-child(3){
+    width: 20%;
+    margin-left: -5px;
+}
+.heading p:nth-child(4){
+    width: 20%;
+    margin-left: -2px;
+}
+
+
+.course_information{
+    display: flex;
+    width: 98%;
+    /* justify-content: space-around; */
+    padding: 10px 15px;
+    border-radius: 10px;
+    align-items: center;
+}
+.blue_background{
+    background-color: #eff5ff;
+}
+
+
+.course_information_left{
+    display: flex;
+    width: 90%;
+    align-items: center;
+}
+.course_information_left > div{
+    width: 30%;
+}
+.course_information_left > div img{
+    width: 30%;
+    aspect-ratio: 1.3/1;
+}
+
+.course_information_left > p{
+    font-size: 1.2rem;
+    opacity: 80%;
+}
+.course_information_left p:nth-child(2){
+    width: 20%;
+}
+.course_information_left p:nth-child(3){
+    width: 20%;
+}
+.course_information_left p:nth-child(4){
+    width: 10%;
+}
+
+
+
+.mark_complete_btn{
+    width: 10%;
+    margin-left: -8rem;
+}
+
+.mark_complete_btn > button{
+    border: none;
+    background-color: transparent;
+    transition: ease-in-out;
+    transition-duration: 200ms;
+    width: 13rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    background-color: #517bc8;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.mark_complete_btn > button:hover:not([disabled]) {
+    cursor: pointer;
+    scale: 103%;
+}
+
+.mark_complete_btn > button:disabled {
+    cursor: not-allowed;
+    opacity: 60%;
+}
