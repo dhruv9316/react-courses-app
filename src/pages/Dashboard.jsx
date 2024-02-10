@@ -2,6 +2,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import '../styles/Dashboard.css'
 import { markCourseAsCompleted } from '../redux/slices/userSlice'
+import toast from 'react-hot-toast'
 
 const Dashboard = () => {
   const dispatch = useDispatch()
@@ -11,6 +12,12 @@ const Dashboard = () => {
 
   const markAsCompleteHandler = (idx) => {
     dispatch(markCourseAsCompleted(idx))
+    toast.success("Course Marked as Completed Successfully", {
+        style: {
+            maxWidth: '1200px', 
+            fontSize: '1.2rem'
+        },
+    })
   }
 
   return (
