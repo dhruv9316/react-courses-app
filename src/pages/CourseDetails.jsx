@@ -36,7 +36,6 @@ const CourseDetails = () => {
 
   const handleSectionToggle = () => {
     setIsSectionVisible(prev => !prev)
-    // setIsSectionVisible(prev => !prev)
   }
 
   return (
