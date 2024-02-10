@@ -123,3 +123,132 @@
     cursor: not-allowed;
     opacity: 60%;
 }
+
+
+.responsive_course_information{
+    display: none;
+}
+
+@media (max-width: 950px){
+    
+    .heading p:nth-child(1){
+        width: 15%;
+    }
+    .course_information_left > div{
+        width: 15%;
+    }
+    .course_information_left > div img{
+        width: 60%;
+    }
+
+}
+
+@media (max-width: 755px){
+    .heading p:nth-child(1){
+        margin-left: 0px;
+    }
+    .heading p:nth-child(2){
+        margin-left: 10px;
+    }
+
+    
+    .mark_complete_btn{
+        width: 6%;
+        margin-left: -6rem;
+    }
+
+    .mark_complete_btn > button{
+        width: 10rem;
+        height: 2.5rem;
+        border-radius: 8px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 620px){
+    .heading{
+        display: none;
+    }
+    .course_information{
+        display: none;
+    }
+
+    .responsive_course_information{
+        display: flex;
+        padding: 10px;
+        border-radius: 10px;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .responsive_course_information_left{
+        display: flex;
+        width: 30%;
+        justify-content: center;
+        align-items: center;
+    }
+    .responsive_course_information_left img{
+        width: 80%;
+        border-radius: 10px;
+        aspect-ratio: 1.3/1;
+    }
+
+    .responsive_course_information_right{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* align-items: center; */
+        gap: 0.5rem;
+    }
+
+    .responsive_course_top_div{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        height: 1.5rem;
+    }
+    .responsive_course_top_div h4{
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    .responsive_course_top_div span{
+        color: #517bc8;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    .responsive_course_middle_div{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        height: 1.5rem;
+    }
+    
+    .responsive_mark_complete_btn{
+        width: 10%;
+        /* margin-left: -8rem; */
+    }
+
+    .responsive_mark_complete_btn > button{
+        border: none;
+        background-color: transparent;
+        transition: ease-in-out;
+        transition-duration: 200ms;
+        width: 10rem;
+        height: 1.8rem;
+        border-radius: 6px;
+        background-color: #517bc8;
+        color: white;
+        font-size: 1rem;
+    }
+
+    .responsive_mark_complete_btn > button:hover:not([disabled]) {
+        cursor: pointer;
+        scale: 103%;
+    }
+
+    .responsive_mark_complete_btn > button:disabled {
+        cursor: not-allowed;
+        opacity: 60%;
+    }
+}

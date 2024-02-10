@@ -54,6 +54,40 @@ const Dashboard = () => {
                             </div>
                         ))
                     }
+
+                    {/* Enrolled Courses Card for small devices */}
+                    {
+                        enrolledCourses.map((course, idx) => (
+                            <div className= {`responsive_course_information ${idx % 2 === 0 ? 'blue_background' : ''}`}  key={idx}>
+                                <div className='responsive_course_information_left'>
+                                    {/* <div> */}
+                                        <img src={course.thumbnail} />
+                                    {/* </div> */}
+                                </div>
+                                
+                                <div className='responsive_course_information_right'>
+                                    <div className='responsive_course_top_div'>
+                                        <h4>{course.courseName}</h4>
+                                        <p>by <span>{course.instructor?.firstName ?? 'John'}</span></p>
+                                    </div>
+
+                                    <div className='responsive_course_middle_div'>
+                                        <p>Status: </p>
+                                        <h4>{course.isCourseCompleted ? 'Completed' : 'Pending'}</h4>
+                                    </div>
+
+                                    <div className='responsive_mark_complete_btn'>
+                                        <button 
+                                            onClick={() => (markAsCompleteHandler(idx))}
+                                            disabled= {course.isCourseCompleted}
+                                        >
+                                            Mark as completed
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        ))
+                    }
                 </div>
             }
         </div>
