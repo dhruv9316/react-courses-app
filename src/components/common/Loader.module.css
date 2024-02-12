@@ -1,0 +1,122 @@
+.loader_container {
+    width: 100%;
+    /* height: 100vh; */
+    height: 60vh;
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+.loader {
+    width: fit-content;
+    position: relative;
+    right: 4.5rem;
+    transform: scale(0.9);
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+}
+
+.loader div {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transform: translate(40px, 40px) scale(1);
+    background: #243658;
+    animation: ldio-gb8sbijoa3k 1s infinite cubic-bezier(0, 0.5, 0.5, 1);
+}
+
+.loader div:nth-child(1) {
+    background: #ff5454;
+    transform: translate(74px, 40px) scale(1);
+    animation: ldio-gb8sbijoa3k-r 0.25s infinite cubic-bezier(0, 0.5, 0.5, 1), ldio-gb8sbijoa3k-c 1s infinite step-start;
+}
+
+.loader div:nth-child(2) {
+    animation-delay: -0.25s;
+    background: #243658;
+}
+
+.loader div:nth-child(3) {
+    animation-delay: -0.5s;
+    background: #ff5454;
+}
+
+.loader div:nth-child(4) {
+    animation-delay: -0.75s;
+    background: #5794d1;
+}
+
+.loader div:nth-child(5) {
+    animation-delay: -1s;
+    background: #abbd81;
+}
+
+.ldio-gb8sbijoa3k div {
+    box-sizing: border-box;
+}
+
+@keyframes ldio-gb8sbijoa3k {
+    0% {
+        transform: translate(6px, 40px) scale(0);
+    }
+
+    25% {
+        transform: translate(6px, 40px) scale(0);
+    }
+
+    50% {
+        transform: translate(6px, 40px) scale(1);
+    }
+
+    75% {
+        transform: translate(40px, 40px) scale(1);
+    }
+
+    100% {
+        transform: translate(74px, 40px) scale(1);
+    }
+}
+
+@keyframes ldio-gb8sbijoa3k-r {
+    0% {
+        transform: translate(74px, 40px) scale(1);
+    }
+
+    100% {
+        transform: translate(74px, 40px) scale(0);
+    }
+}
+
+@keyframes ldio-gb8sbijoa3k-c {
+    0% {
+        background: #243658
+    }
+
+    25% {
+        background: #abbd81
+    }
+
+    50% {
+        background: #5794d1
+    }
+
+    75% {
+        background: #ff5454
+    }
+
+    100% {
+        background: #243658
+    }
+}
+
+@media (max-width: 640px){
+    .loader {
+        right: 2rem;
+    }
+}

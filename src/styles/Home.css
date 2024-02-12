@@ -14,7 +14,7 @@
     display: flex;
     width: 90%;
     /* height: 80%; */
-    /* align-items: center; */
+    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     max-width: 1300px;

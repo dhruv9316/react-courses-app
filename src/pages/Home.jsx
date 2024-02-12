@@ -4,20 +4,23 @@ import axios from 'axios'
 import Coursecard from '../components/home/Coursecard'
 import SearchBar from '../components/home/SearchBar';
 import toast from 'react-hot-toast';
+import Loader from '../components/common/Loader';
 
 const Home = () => {
     const [coursesData, setCoursesData] = useState([])
     const [allCoursesData, setAllCoursesData] = useState([])
     const [searchQuery, setSearchQuery] = useState('')
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
         const fetchCoursesData = async () => {
-            const loadingToast = toast.loading('Loading...', {
-                style: {
-                    maxWidth: '1200px', 
-                    fontSize: '1.5rem'
-                },
-            })
+            // const loadingToast = toast.loading('Loading...', {
+            //     style: {
+            //         maxWidth: '1200px', 
+            //         fontSize: '1.5rem'
+            //     },
+            // })
+            setLoading(true)
 
             try{
                 const {status, data} = await axios.get('https://studynotion-backend-qp5p.onrender.com/api/v1/course/get-all-courses');
@@ -33,12 +36,14 @@ const Home = () => {
                 console.log("fetch Courses Data function error => ", error)
             }
 
-            toast.dismiss(loadingToast)
+            // toast.dismiss(loadingToast)
+            setLoading(false)
         }
         fetchCoursesData();
         
     }, [])
     console.log("<<<<<<= coursesData =>>>>>>> ", coursesData);
+    console.log("loading =>> ", loading);
 
     useEffect(() => {
         const searchQueryHandler = () => {
@@ -73,8 +78,11 @@ const Home = () => {
             />
 
             <div className='courses_container'>
-                {/* <Spinner /> */}
+                {/* <Loader /> */}
                 {
+                    loading 
+                    ? <Loader />
+                    :
                     coursesData.length === 0
                     ?
                     <div>No Courses Found</div>
