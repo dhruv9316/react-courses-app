@@ -23,7 +23,7 @@ const Home = () => {
             setLoading(true)
 
             try{
-                const {status, data} = await axios.get('https://studynotion-backend-qp5p.onrender.com/api/v1/course/get-all-courses');
+                const {status, data} = await axios.get('https://backend-studynotion.vercel.app/api/v1/course/get-all-courses');
 
                 console.log("courses data response => ", data);
 
